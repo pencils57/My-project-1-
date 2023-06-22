@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-
     public GameObject player;
-
 
     int step = 0;
 
     void Start()
     {
-
+    
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
 
-        Debug.Log(step);
 
         if (step == 1)
         {

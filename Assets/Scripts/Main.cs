@@ -7,11 +7,12 @@ public class Main : MonoBehaviour
     List<Character> CharList = new List<Character>();
     void Start()
     {
-        for(int i = 0; i <= 2; i++)
-        {
-            CharList[i] = new Character("a", "b", 2, 3);
-            CreateCharacter(CharList[i]);
-        }
+
+        CreateCharacter(new Character("1", "1", 1, 1));
+        CreateCharacter(new Character("2", "2", 2, 2));
+        CreateCharacter(new Character("3", "3", 3, 3));
+
+        RemoveCharacter(2);
 
         PrintAllCharacter();
     }
@@ -19,21 +20,35 @@ public class Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void CreateCharacter( Character character)
+    private void CreateCharacter(Character character)
     {
-        character = new Character("a", "b", 2, 3);
+        CharList.Add(character);
     }
 
     private void RemoveCharacter(int index)
     {
-        CharList[index] = null;
+        CharList[index - 1] = null;
+        //CharList.RemoveAt(index);
     }
 
     private void PrintAllCharacter()
     {
-        CharList[0].Getinfo();
+        int i = 0;
+
+        while (i <= CharList.Count)
+        {
+            if (CharList[i] == null)
+            {
+                Debug.Log("리스트가 비어있습니다.");
+            }
+            else
+            {
+                CharList[i].Getinfo();
+            }
+            i++;
+        }
     }
 }

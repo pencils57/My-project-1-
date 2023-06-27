@@ -38,7 +38,7 @@ public class Main : MonoBehaviour
     {
         int i = 0;
 
-        while (i <= CharList.Count)
+        while (i < CharList.Count)
         {
             if (CharList[i] == null)
             {

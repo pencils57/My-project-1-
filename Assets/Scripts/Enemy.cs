@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy
 {
-    enum EnemyType
+    public enum EnemyType
     {
         Basic = 0,
         Boss
@@ -16,25 +16,34 @@ public class Enemy : MonoBehaviour
     private float speed;
     public Enemy(EnemyType type, int _hp, int _atk, float _speed)
     {
-        enemyType = type;
+        this.enemyType = type;
         hp = _hp;
         atk = _atk;
-        speed = _speed; 
+        speed = _speed;
 
     }
 
-    //public string Name()
-    //{
-    //    return this.name;
-    //}
 
-    //public int Hp()
-    //{
-    //    return this.hp;
-    //}
+    public int Hp
+    {
+        get
+        {
+            return this.hp;
+        }
+        
+    }
+
+    public float Speed
+    {
+        get
+        {
+            return this.speed;
+        }
+
+    }
 
     public void GetEnemyInfo()
     {
-       Debug.Log($"Enmey name : {name} , hp : {hp}");
+       Debug.Log($"Enmey name :, hp : {hp}");
     }
 }

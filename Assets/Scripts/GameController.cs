@@ -6,11 +6,7 @@ public class GameController : MonoBehaviour
 {
     void Start()
     {
-        Enemy e1 = new Enemy("elf", 10);
-        Enemy e2 = new Enemy("dragon", 100);
 
-        e1.GetEnemyInfo();
-        e2.GetEnemyInfo();
 
     }
 

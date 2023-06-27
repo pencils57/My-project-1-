@@ -18,10 +18,10 @@ public class Test : MonoBehaviour
     void Start()
     {
         //1¹ø
-        EnemyList[0] = new Enemy("name", 10);
+        //EnemyList[0] = new Enemy("name", 10);
         //2¹ø
-        Enemy e = new Enemy("name", 10);
-        EnemyList[0] = e;
+        //Enemy e = new Enemy("name", 10);
+        //EnemyList[0] = e;
     }
 
     // Update is called once per frame
